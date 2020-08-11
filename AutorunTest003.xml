@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<batch name="Simple Batch" default="root">
+  <!-- This is the starting task -->
+  <target name="root">
+
+    <openmodel
+        file="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\IFC\Brakkerigg - Standard.ifc" disipline="Architectural" />
+
+    <openmodel
+        file="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\IFC\Brakkerigg_2etg.ifc" disipline="Architectural" />
+
+    <openruleset
+        file="C:\Users\Public\Solibri\SOLIBRI\Rulesets\Architectural Rules\BIM Validation - Architectural.cset" />
+
+    <check />
+
+    <autocomment zoom="TRUE" />
+
+    <createpresentation />
+
+    <bcfreport
+      file="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\Output\AutorunTest002\Found issues.bcfzip" version="2" />
+
+    <generalreport
+      pdffile="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\Output\AutorunTest003\Presentation.pdf"/>
+
+    <coordinationreport
+      file="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\Output\AutorunTest003\CoordinationTest.xls"       
+      templatefile="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\Template.xls" />
+
+
+    <savemodel
+        file="C:\Users\BergqvistSO\Documents\Solibri_Training\Autorun_Tester\Output\AutorunTest003\Brakkerigger002.smc" />
+
+    <closemodel/>
+
+    <exit />
+
+  </target>
+</batch>
